@@ -1,0 +1,16 @@
+GAN paper: http://www.vovakim.com/papers/18_CVPRSpotlight_FontDropper.pdf
+- TODO: figure out what actually happens between the 26-channel input and the 26-channel output
+
+RNN paper (Graves, uses mixture density networks to make the output nondeterministic): https://arxiv.org/pdf/1308.0850.pdf
+Graves blog post (summarizes the paper, essentially): https://greydanus.github.io/2016/08/21/handwriting/
+
+Another RNN paper using an autoencoder: https://arxiv.org/pdf/1812.07103.pdf
+- Their PCA results at the end are kinda cool
+- Rather than outputting (x,y) with a MDN, they output instantaneous direction and speed using Freeman codes, which quantize direction, making it a categorical variable
+- Therefore, instead of using MDNs, they can output a categorical probability distribution for stroke direction via sigmoid activation
+
+A blog post on RNNs and backprop thru time that I think is great, whether we use RNNs or not: https://medium.com/datadriveninvestor/how-do-lstm-networks-solve-the-problem-of-vanishing-gradients-a6784971a577
+
+These... exist. Feel free to read them:
+https://ait.ethz.ch/projects/2018/deepwriting/downloads/deepwriting_chi18.pdf
+http://visual.cs.ucl.ac.uk/pubs/handwriting/handwriting_visual.pdf
