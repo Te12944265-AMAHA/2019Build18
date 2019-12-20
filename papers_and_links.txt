@@ -4,16 +4,19 @@ GAN paper: http://www.vovakim.com/papers/18_CVPRSpotlight_FontDropper.pdf
 RNN paper (Graves, uses mixture density networks to make the output nondeterministic): https://arxiv.org/pdf/1308.0850.pdf
 Graves blog post (summarizes the paper, essentially): https://greydanus.github.io/2016/08/21/handwriting/
 - Section 4 and 5 are what we need
-- Graves actually does something really cool in this paper. What we're trying to do is essentially section 5 (Handwriting Synthesis) but in section 4 (Handwriting Prediction), he actually trains the network to just write anything without
-enforcing specific letters. The network ends up inventing its own words and writing them in the style of a human, which I think is pretty crazy
+- Graves actually does something really cool in this paper. What we're trying to do is essentially section 5 (Handwriting Synthesis) but in section 4 (Handwriting Prediction), he actually trains the network to just write anything without enforcing specific letters. The network ends up inventing its own words and writing them in the style of a human, which I think is pretty crazy
 
 Another RNN paper using an autoencoder: https://arxiv.org/pdf/1812.07103.pdf
 - Their PCA results at the end are kinda cool
 - Rather than outputting (x,y) with a MDN, they output instantaneous direction and speed using Freeman codes, which quantize direction, making it a categorical variable
 - Therefore, instead of using MDNs, they can output a categorical probability distribution for stroke direction via sigmoid activation
 
+Another RNN paper (seems less sketchy than the previous one): https://ait.ethz.ch/projects/2018/deepwriting/downloads/deepwriting_chi18.pdf
+- Pretty probability heavy
+- Encodes style using a latent random variable
+- Encodes letter using another latent random variable (I believe this is similar to Graves)
+
 A blog post on RNNs and backprop thru time that I think is great, whether we use RNNs or not: https://medium.com/datadriveninvestor/how-do-lstm-networks-solve-the-problem-of-vanishing-gradients-a6784971a577
 
 These... exist. Feel free to read them:
-https://ait.ethz.ch/projects/2018/deepwriting/downloads/deepwriting_chi18.pdf
 http://visual.cs.ucl.ac.uk/pubs/handwriting/handwriting_visual.pdf
