@@ -8,7 +8,22 @@ Input text, output stored characters in order
 Remove word from full-alphabet sentence, learn from sentence, predict word
 
 
-Network structure: TBD
+Network structure: GAN
+
+
+OCR: pytesseract
+Handwriting datasets: need characters stratified by writer (whole alphabet for multiple writers)
+
+Generator network
+Discriminator network
+(these both extend Module class)
+
+Trainer script, saves network to pth file
+
+Class/function to display sequence of character images given text
+
+Script to takes in an image drawn using some drawing software, identify characters, feed characters to generator network, outputs the full alphabet (or missing word)
+
 
 
 ## About the slides
